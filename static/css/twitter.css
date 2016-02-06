@@ -28,23 +28,23 @@ body {
   margin-top: 7px;
 }
 
-.guide1 {
+.guide {
   float: left;
-  height: 40px;
-  width: 80px;
   font-size: 13px;
   cursor: pointer;
+}
+
+.guide_first {
+  height: 40px;
+  width: 80px;
   border-bottom: 5px solid #0084B4;
 }
 
-.guide {
-  float: left;
+.guide_ {
   height: 40px;
   width: 80px;
-  font-size: 13px;
-  cursor: pointer;
 }
-.guide:hover {
+.guide_:hover {
   border-bottom: 5px solid #0084B4;
   transition: all ease-in-out 0.10s;
   -moz-transition: all ease-in-out 0.10s;
@@ -216,7 +216,7 @@ body {
   margin-left: 10px;
 }
 
-.info_tweeted, .info_following, .info_followed {
+.info_ {
   display: inline-block;
   width: 30%;
   height: 50px;
@@ -436,53 +436,55 @@ textarea {
 .func {
   display: block;
   width: 100%;
-  height: 70px;
-  margin-top: -30px;
+  height: 35px;
+  position: relative;
 }
 
-.func-img, .reply, .repost, .heart, .more {
-  display: block;
-  position: absolute;
-  margin-left: 13px;
-  width: 24px;
-  height: 24px;
-  margin-top: 50px;
-}
-
-.box, .reply-box, .repost-box, .heart-box, .more-box {
-  display: inline-block;
-  width: 50px;
-  height: 70px;
-  margin-right: 30px;
-}
-
-.reply-box:hover .reply-active {
-  display: block;
-}
-
-.repost-box:hover .repost-active {
-  display: block;
-}
-
-.heart-box:hover .heart-active {
-  display: block;
-}
-
-.more-box:hover .more-active {
-  display: block;
-}
-
-.bbox {
-  width: 50px;
-  height: 40px;
+.box {
+  margin-right: 35px;
 }
 
 .active, .reply-active, .repost-active, .heart-active, .more-active {
-  display: none;
-  margin-top: 5px;
-  position: absolute;
+  bottom: 30px;
   width: 50px;
   height: 40px;
+  position: absolute;
+}
+
+.reply-active {
+  display: none;
+  left: 20px;
+}
+
+.repost-active {
+  display: none;
+  left: 120px;
+}
+
+.heart-active {
+  display: none;
+  left: 215px;
+}
+
+.more-active {
+  display: none;
+  left: 315px;
+}
+
+.reply:hover + .reply-active {
+  display: block;
+}
+
+.repost:hover + .repost-active {
+  display: block;
+}
+
+.heart:hover + .heart-active {
+  display: block;
+}
+
+.more:hover + .more-active {
+  display: block;
 }
 
 .hover_message {
@@ -505,6 +507,14 @@ textarea {
   border-top: 10px solid #343a3d;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
+}
+
+.func-img, .reply, .repost, .heart, .more {
+  width: 24px;
+  height: 24px;
+  margin-top: 8px;
+  margin-left: 35px;
+  display: inline-block;
 }
 
 .reply {
